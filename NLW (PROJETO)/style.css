@@ -29,45 +29,43 @@ body {
   text-align: center
   }
 
-.formatacao{
+.wrapper{
   width: 37.5rem;
   margin-right: auto;
   margin-left: auto;
   padding-inline: 2.4rem;
-
+  color: var(--cor-principal);
 }
 
 /* ========== FORMATACAO ICONES NAV ===========*/
 
-nav {
-    display: flex;
-    
-    height: var(--altura-nav);
+nav{
+  display: flex;
+  
+  height: var(--altura-nav);
+  
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-    position: fixed;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    }
-
-nav.formatacao{
+nav .wrapper{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 nav.scroll{
-  background: var(--cor-principal);
+  background-color: var(--cor-principal);
   width: 100vw;
 }
-
 nav.scroll svg:nth-child(1) path {
   fill: white
 }
-nav.scroll svg:nth-child(2) path{
-  stroke:white
+nav.scroll svg:nth-child(2) path {
+  stroke: white;
 }
-    
+
 
 /* ========== FORMATACAO HEADER ===========*/
 
@@ -94,6 +92,7 @@ header h4 {
   margin-bottom: 1.6rem;
   font-size: 1.4rem;
   color: var(--cor-principal);
+
 }
 
 header h1 {
