@@ -27,7 +27,8 @@
 body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
-  text-align: center
+  text-align: center;
+  overflow: overlay;
   }
 
 .wrapper{
@@ -76,7 +77,11 @@ nav.scroll svg:nth-child(1) path {
 nav.scroll button path {
   stroke: white;
 }
-
+nav button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 
 /* ========== FORMATACAO HEADER ===========*/
 
