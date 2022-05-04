@@ -16,12 +16,11 @@
 
   --altura-nav: 7.2rem;
 
-
-  
-
-
-
   font-size: 62,5%; /*1rem = 10px */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,6 +28,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
   overflow: overlay;
+  background-color: #F7F9F9;
   }
 
 .wrapper{
@@ -49,11 +49,16 @@ ul {
   list-style: none;
 }
 
+section {
+
+  padding-block: 10rem;
+
+}
+
 /* ========== FORMATACAO ICONES NAV ===========*/
 
 nav{
   display: flex;
-  
   height: var(--altura-nav);
   
   position: fixed;
@@ -85,8 +90,13 @@ nav button {
 
 /* ========== FORMATACAO HEADER ===========*/
 
-header{
-  margin-top: calc(4.1rem + var(--altura-nav));
+header {
+  padding-top: calc(4.1rem + var(--altura-nav));
+}
+#services {
+  padding-top: 0;
+
+
 }
 
 
@@ -208,6 +218,10 @@ body.menu-expanded{
   overflow: hidden;
 }
 
+.menu{
+  transform: translateY(100%);
+}
+
 body.menu-expanded .menu{
   position:fixed;
   left:0;
@@ -215,8 +229,9 @@ body.menu-expanded .menu{
   background-color: var(--cor-principal);
   width: 100vw;
   height: 100vh;
- 
   padding-top: var(--altura-nav);
+  transition: transform 300ms;
+  transform: translateY(0)
 
 }
 
@@ -277,3 +292,61 @@ body.menu-expanded button path {
 body.menu-expanded > :not(nav) {
   display: none;
 }
+
+/* ========== SERVICES ===========*/
+
+#services header h4{
+  font-size: 1.4rem;
+  line-height: 150%;
+  color: var(--cor-principal);
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+
+
+  margin-bottom: 1.6rem;
+
+}
+
+#services header h2{
+  font-size: 3rem;
+  line-height: 3.9 rem;
+  letter-spacing: 0.08rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 6rem;
+}
+
+#services header h3{
+  font-size: 2.4rem;
+  line-height: 3.1 rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 6rem;
+}
+
+.cards{
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 2.2rem;
+}
+
+.card {
+padding:2.4rem;
+width: 37.2rem;
+background: white;
+border: 1px solid #DCE9E2;
+box-sizing: border-box;
+border-radius: 0.6rem;
+text-align: left;
+}
+.card h3{
+  margin-block: 1.6rem;
+}
+
+.card p {
+  color: var(--cor-paragrafo);
+  font-size: 16px;
+  line-height: 150%;
+
+}
+
