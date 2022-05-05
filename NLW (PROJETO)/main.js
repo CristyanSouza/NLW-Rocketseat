@@ -1,4 +1,15 @@
+window.addEventListener('scroll', onScroll)
+
+
+onScroll()
 function onScroll() {
+  showNavOnScroll()
+  showBackToHomeButton()
+}
+
+
+
+function showNavOnScroll(){
   if(scrollY){
     navigation.classList.add('scroll')
   } 
@@ -7,11 +18,31 @@ function onScroll() {
   }
 }
 
+
+function showBackToHomeButton(){
+  if(scrollY > 500){
+    backToTopButton.classList.add('show')
+  } 
+  else{
+    backToTopButton.classList.remove('show')
+  }
+}
+
+
 function openMenu() {
   document.body.classList.add('menu-expanded')
 }
 function closeMenu() {
   document.body.classList.remove('menu-expanded')
+}
+
+function showHomeButton(){
+  if(scrollY) {
+    backToTopButton.classList.add('show')
+  }
+  else{
+    backToTopButton.classList.remove('show')
+  }
 }
 
 ScrollReveal({

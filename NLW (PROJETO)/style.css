@@ -1,22 +1,21 @@
 /* ========== FORMATACAO GERAL ===========*/
-*{
+* {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
 }
 
 :root {
-
   --cor-principal: hsl(170, 100%, 26%);
-  --cor-secundaria: hsl(210,11%,15%);
-  --cor-paragrafo: hsl(210,9%, 31%);
-  --cor-fundo-stats: hsl(39,100%,97%);
-  --cor-borda-stats: hsl(147,23%,89%);
+  --cor-secundaria: hsl(210, 11%, 15%);
+  --cor-paragrafo: hsl(210, 9%, 31%);
+  --cor-fundo-stats: hsl(39, 100%, 97%);
+  --cor-borda-stats: hsl(147, 23%, 89%);
   --cor-fundo: #c7ecd9;
-
+  --wpp-button-mouse: hsl(170, 100%, 14%);
   --altura-nav: 7.2rem;
 
-  font-size: 62,5%; /*1rem = 10px */
+  font-size: 62, 5%; /*1rem = 10px */
 }
 
 html {
@@ -28,19 +27,18 @@ body {
   font-size: 1.6rem;
   text-align: center;
   overflow: overlay;
-  background-color: #F7F9F9;
-  }
+  background-color: #f7f9f9;
+}
 
-.wrapper{
+.wrapper {
   width: 37.5rem;
   margin-right: auto;
   margin-left: auto;
   padding-inline: 2.4rem;
-  color: var(--cor-principal);
 }
 
 html,
-body{
+body {
   width: 100%;
   height: 100%;
 }
@@ -50,17 +48,15 @@ ul {
 }
 
 section {
-
   padding-block: 10rem;
-
 }
 
 /* ========== FORMATACAO ICONES NAV ===========*/
 
-nav{
+nav {
   display: flex;
   height: var(--altura-nav);
-  
+
   position: fixed;
   top: 0;
   left: 50%;
@@ -68,17 +64,17 @@ nav{
   z-index: 100;
 }
 
-nav .wrapper{
+nav .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-nav.scroll{
+nav.scroll {
   background-color: var(--cor-principal);
   width: 100vw;
 }
 nav.scroll svg:nth-child(1) path {
-  fill: white
+  fill: white;
 }
 nav.scroll button path {
   stroke: white;
@@ -90,18 +86,17 @@ nav button {
 }
 
 /* ========== FORMATACAO HEADER ===========*/
+header h3 {
+  font-size: 2.4rem;
+  line-height: 3.1 rem;
+  color: var(--cor-secundaria);
+}
 
 header {
   padding-top: calc(4.1rem + var(--altura-nav));
 }
-#services {
-  padding-top: 0;
 
-
-}
-
-
-#home::before{
+#home::before {
   content: '';
   width: 100%;
   height: calc(108rem + var(--altura-nav));
@@ -112,14 +107,6 @@ header {
   top: 0;
   left: 0;
   z-index: -1;
-
-}
-
-header h4 {
-  margin-bottom: 1.6rem;
-  font-size: 1.4rem;
-  color: var(--cor-principal);
-
 }
 
 header h1 {
@@ -128,7 +115,13 @@ header h1 {
   margin-bottom: 2.4rem;
 }
 
-header p {
+header h2 {
+  font-size: 3rem;
+  line-height: 3.9 rem;
+  color: var(--cor-secundaria);
+}
+
+p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -136,7 +129,7 @@ header p {
   margin-bottom: 3.2rem;
 }
 
-header button {
+.wpp {
   background: var(--cor-principal);
 
   border: none;
@@ -144,9 +137,9 @@ header button {
 
   margin-bottom: 6rem;
 
-  height: 6.2rem;
-  width: 26.3rem;
-  
+  height: 5rem;
+  width: 25rem;
+
   color: white;
   font-size: 1.4rem;
   font-weight: 700;
@@ -158,32 +151,39 @@ header button {
   gap: 1.6rem;
   margin-right: auto;
   margin-left: auto;
+  text-decoration: none;
+}
+.wpp:hover {
+  background-color: var(--wpp-button-mouse);
+  transition: background 500ms;
 }
 
-  header img{
-    display: block;
-    margin-inline: auto;
-    object-position: 0 2rem;
-  } 
+#home img {
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
 
+#home h4 {
+  color: var(--cor-principal);
+}
 /* ========== FORMATACAO STATS ===========*/
 
-.stats{
+.stats {
   width: 32.7rem;
   height: 47rem;
   background-color: var(--cor-fundo-stats);
   margin-inline: auto;
   border: 1px solid var(--cor-borda-stats);
-  border-radius: .6rem;
+  border-radius: 0.6rem;
 
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   padding-block: 4rem;
 
   gap: 6rem;
- 
 }
 
 .stat p {
@@ -196,7 +196,7 @@ header button {
   font-size: 4.8rem;
   color: var(--cor-secundaria);
   line-height: 130%;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 /* ========== MENU EXPANDED ===========*/
@@ -204,7 +204,7 @@ header button {
 .menu,
 .close-menu,
 body.menu-expanded .open-menu {
-  opacity:0;
+  opacity: 0;
   visibility: hidden;
 }
 
@@ -212,35 +212,33 @@ body.menu-expanded .menu,
 body.menu-expanded .close-menu {
   opacity: 1;
   visibility: visible;
-
 }
 
-body.menu-expanded{
+body.menu-expanded {
   overflow: hidden;
 }
 
-.menu{
+.menu {
   transform: translateY(100%);
 }
 
-body.menu-expanded .menu{
-  position:fixed;
-  left:0;
-  top:0;
+body.menu-expanded .menu {
+  position: fixed;
+  left: 0;
+  top: 0;
   background-color: var(--cor-principal);
   width: 100vw;
   height: 100vh;
   padding-top: var(--altura-nav);
   transition: transform 300ms;
-  transform: translateY(0)
-
+  transform: translateY(0);
 }
 
-body.menu-expanded nav{
+body.menu-expanded nav {
   position: relative;
 }
 
-.menu ul:nth-child(1){
+.menu ul:nth-child(1) {
   display: flex;
   flex-direction: column;
   gap: 4.4rem;
@@ -249,26 +247,30 @@ body.menu-expanded nav{
   font-size: 2.4rem;
   line-height: 3.1rem;
 }
-.menu ul li a{
+.menu ul li a {
   color: white;
   text-decoration: none;
 }
 
-.menu .button{
+.menu .wpp {
   background-color: white;
   color: var(--cor-principal);
   border-radius: 4rem;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.8rem;
-  line-height: 2.3rem;
   text-transform: uppercase;
   text-decoration: none;
- 
+  justify-content: center;
   display: inline-block;
   padding: 16px 32px;
-  
   margin-bottom: 8rem;
   margin-top: 4.8rem;
+}
+
+.menu .wpp:hover {
+  background-color: var(--cor-principal);
+  color: white;
+ 
 }
 
 .sociallinks {
@@ -284,7 +286,7 @@ body.menu-expanded button {
   z-index: 5;
 }
 body.menu-expanded .logo path {
-  fill:white
+  fill: white;
 }
 body.menu-expanded button path {
   stroke: white;
@@ -303,44 +305,36 @@ body.menu-expanded > :not(nav) {
   letter-spacing: 0.08rem;
   text-transform: uppercase;
 
-
   margin-bottom: 1.6rem;
-
 }
 
 #services header h2 {
-  font-size: 3rem;
-  line-height: 3.9 rem;
   letter-spacing: 0.08rem;
-  color: var(--cor-secundaria);
   margin-bottom: 6rem;
 }
 
 #services header h3 {
-  font-size: 2.4rem;
-  line-height: 3.1 rem;
-  color: var(--cor-secundaria);
   margin-bottom: 6rem;
 }
 
-.cards{
-display:flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-gap: 2.2rem;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.2rem;
 }
 
 .card {
-padding:2.4rem;
-width: 37.2rem;
-background: white;
-border: 1px solid #DCE9E2;
-box-sizing: border-box;
-border-radius: 0.6rem;
-text-align: left;
+  padding: 2.4rem;
+  width: 37.2rem;
+  background: white;
+  border: 1px solid #dce9e2;
+  box-sizing: border-box;
+  border-radius: 0.6rem;
+  text-align: left;
 }
-.card h3{
+.card h3 {
   margin-block: 1.6rem;
 }
 
@@ -348,9 +342,7 @@ text-align: left;
   color: var(--cor-paragrafo);
   font-size: 16px;
   line-height: 150%;
-
 }
-
 
 #about {
   background-color: var(--cor-fundo-stats);
@@ -364,24 +356,16 @@ text-align: left;
   text-transform: uppercase;
   text-align: left;
   margin-bottom: ;
-
 }
 
 #about header h2 {
-  font-size: 3rem;
-  line-height: 3.9 rem;
-  color: var(--cor-secundaria);
   margin-bottom: 1.6rem;
   text-align: left;
   box-sizing: border-box;
   margin-top: 1.6rem;
-
 }
 
 #about header h3 {
-  font-size: 2.4rem;
-  line-height: 3.1 rem;
-  color: var(--cor-secundaria);
   margin-bottom: 1.6rem;
 }
 
@@ -390,10 +374,80 @@ text-align: left;
   font-size: 16px;
 }
 
-#about img {
+#about img,
+#contact img {
   width: 32.5rem;
   border-radius: 10px;
   justify-content: center;
   justify-items: center;
+}
 
-  }
+/* ========== ABOUT =========== */
+
+#contact {
+  text-align: left;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+#contact ul li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+#contact .wpp {
+  margin-left: 0;
+}
+
+/* ================ FOOTER ===============*/
+
+footer {
+  background: var(--cor-principal);
+  padding-block: 6rem;
+  text-align: left;
+}
+
+footer p {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2rem;
+  margin-top: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+footer .logo path {
+  fill: white;
+}
+
+footer ul.sociallinks {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/*==============BACK TO TOP BUTTON */
+#backToTopButton.show {
+  position: fixed;
+  bottom: 3rem;
+  right: 2.5rem;
+  z-index: 100;
+  opacity: 1;
+  visibility: visible;
+
+  transition: 700ms;
+  transform: translateY(0);
+}
+
+#backToTopButton {
+  position: fixed;
+  bottom: 3rem;
+  right: 2.5rem;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+}
