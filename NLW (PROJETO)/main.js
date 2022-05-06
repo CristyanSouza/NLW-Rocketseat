@@ -1,60 +1,46 @@
 window.addEventListener('scroll', onScroll)
 
-
 onScroll()
 function onScroll() {
   showNavOnScroll()
-  showBackToHomeButton()
+  showBackToTopButtonOnScroll()
 }
 
-
-
-function showNavOnScroll(){
-  if(scrollY){
+function showNavOnScroll() {
+  if (scrollY > 0) {
     navigation.classList.add('scroll')
-  } 
-  else{
-  navigation.classList.remove('scroll')
+  } else {
+    navigation.classList.remove('scroll')
   }
 }
 
-
-function showBackToHomeButton(){
-  if(scrollY > 500){
+function showBackToTopButtonOnScroll() {
+  if (scrollY > 550) {
     backToTopButton.classList.add('show')
-  } 
-  else{
+  } else {
     backToTopButton.classList.remove('show')
   }
 }
-
 
 function openMenu() {
   document.body.classList.add('menu-expanded')
 }
+
 function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
 
-function showHomeButton(){
-  if(scrollY) {
-    backToTopButton.classList.add('show')
-  }
-  else{
-    backToTopButton.classList.remove('show')
-  }
-}
-
 ScrollReveal({
   origin: 'top',
-  distance: '100px',
-  duration: 700,
-}).reveal('#home');
-
-ScrollReveal({
-  origin: 'top',
-  distance: '300px',
-  duration: 2000,
-}).reveal('#home .stats, #services header, .card, #about, #about header');
-
-
+  distance: '30px',
+  duration: 700
+}).reveal(`
+  #home, 
+  #home img, 
+  #home .stats, 
+  #services,
+  #services header,
+  #services .card
+  #about, 
+  #about header, 
+  #about .content`)
