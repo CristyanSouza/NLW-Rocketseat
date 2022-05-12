@@ -1,2 +1,2 @@
 # NLW Rocketseat
- Aprendizados do evento NLW - Rocketseat (HTML, CSS e JAVASCRIPT)
+ Learnings from the NLW event - Rocketseat (HTML, CSS e JAVASCRIPT)
